@@ -22,15 +22,28 @@
 		<junit.version>4.11</junit.version>
 		<log4j.version>1.2.17</log4j.version>
 		<sonar.host.url>http://172.31.41.188:9000/</sonar.host.url>
-                <sonar.login>squ_05c534b7dd9e8528742ed2d414402704806a97c1</sonar.login>
+                <sonar.login>squ_953f6c55f50ca8703e4856a63699cbd00c61d971</sonar.login>
 	
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
 	</properties>
-
-	<dependencies>
+	
+	<repositories>
+		<repository>
+			<id>nexus</id>
+			<url>http://15.206.158.231:9090/pravii/repository/grouprepo-krs/</url>
+		</repository>
 		
+	</repositories>
+	
+	<dependencies>
+		<dependency>
+                   <groupId>com.krs</groupId>
+                   <artifactId>mail</artifactId>
+                   <version>1.0.0</version>
+                </dependency>
+
 		<dependency>
 			<groupId>org.json</groupId>
 			<artifactId>json</artifactId>
@@ -38,6 +51,13 @@
 		</dependency>
 		
 		<!-- test dependencies -->
+		 <dependency>
+                        <groupId>log4j</groupId>
+                        <artifactId>log4j</artifactId>
+                        <version>1.2.17</version>
+                        <scope>test</scope>
+                </dependency>
+
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
@@ -97,14 +117,14 @@
 	
 	    <repository>
 	      <id>nexus</id>
-	      <name>Mithun Technologies Releases Nexus Repository</name>
-	      <url>http://172.31.37.81:9980/mithuntechnologies/repository/citibank-release/</url>
+	      <name>walmart Releases Nexus Repository</name>
+	      <url>>http://15.206.158.231:9090/pravii/repository/walmart-release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
-	      <name>Mithun Technologies Snapshot Nexus Repository </name>
-	      <url>http://172.31.37.81:9980/mithuntechnologies/repository/citibank-snapshot/</url>
+	      <name>Walmart Snapshot Nexus Repository </name>
+	      <url>>http://15.206.158.231:9090/pravii/repository/walmart-snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
